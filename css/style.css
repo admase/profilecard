@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    /* Primary colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-desatblue: hsl(229, 23%, 23%);
+    --dark-grayishblue: hsl(227, 10%, 46%);
+    /* Neutral colors */
+    --dark-gray: hsl(0, 0%, 59%);
+    /* Font styles */
+    --font-size: 18px;
+    --font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    height: 100%;
+    touch-action: manipulation;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: left -4vw top -30vh, right -3vw bottom -50vh;
+    background-size: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--dark-desatblue);
+    background-color: var(--dark-cyan);
+}
+
+#main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* card */
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 375px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.card img {
+    border-radius: 50%;
+    margin: 80px 0 -60px;
+    border: 5px solid #fff;
+}
+
+.img-box {
+    background: url('../images/bg-pattern-card.svg') no-repeat center center / cover;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+.card-body .card-title {
+    font-weight: bold;
+}
+
+.card-body .card-title span,
+.card-body .card-title .card-text {
+    color: var(--dark-gray);
+}
+
+strong {
+    font-weight: bold;
+    color: var(--dark-desatblue);
+}
+
+.card-footer {
+    font-size: var(--font-size);
+    color: var(--dark-gray);
+    line-height: 1;
+}
+
+
+/* media queries */
+
+@media only screen and (min-width: 460px) {
+    body {
+        background-position: left -120vw top -45vh, right -120vw bottom -60vh;
+    }
+    .card {
+        max-width: 350px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-position: left -40vw top -30vh, right -20vw bottom -60vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-position: left -4vw top -30vh, right -3vw bottom -50vh;
+    }
+}
